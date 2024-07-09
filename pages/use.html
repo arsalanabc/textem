@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link  rel="stylesheet" href="temp.css" />
+
+<?php 
+session_start();
+
+?>
+
+<script>
+function validate(){
+var user = document.getElementById("name");
+var password = document.getElementById("password");
+var school = document.getElementById("school");
+
+if(user.value==""){alert("invalid user name"); return false;}
+if(password.value==""){alert("please enter the password!"); return false;}
+if(school.value==""){alert("please select the school"); return false;}
+
+}
+</script>
+</head>
+
+<body>
+<div id="bg">
+
+<div id="top">
+<img src="../images/Untitled logo.png" border="10" align="left">
+<img src="../images/Untitled3.png" align="right" >
+</div> <!-- end top-->
+
+<div id="bar" align="center">
+<a href="../test1.html"> <button type="submit" id="home" value="Submit" style="width:120; height:30"><strong>Home</strong></button></a>
+<a href="contact.html">
+<button type="submit" value="Submit" style="width:120; height:30"><strong>Contact</strong></button></a>
+</div><!-- end bar button -->
+<br>
+<br>
+<br>
+
+</div>
+
+<p>&nbsp;</p>
+<div id="form" align="center">
+<form id="form1" name="form1" method="post" action="../php/loginproc.php" onsubmit="return validate()">
+<table border="0">
+<tr>
+  <p><td>
+    <label >Login</label></td>
+     <td>:</td>
+   <td> <input type="text" name="name" id="name" /> 
+  </td>
+  </p>  
+  </tr>
+  
+ <tr>
+ <p>
+    <td><label>Password</label></td>    
+      <td>:</td>
+   <td> <input type="password" name="password" id="password" /></td>
+  </p>
+  </tr>
+ 
+<tr>
+ <p>
+ <td><label for="school">School </label></td>
+   <td><label for="name">:</label></td>
+ <td>
+   <select name="school" size="1" id="school" style="width:auto">
+   <option> </option>
+     <option>Carleton University</option>
+<option>Concordia University</option>
+<option>Dalhousie University</option>
+<option>Memorial University</option>
+<option>McGill University</option>
+<option>McMaster University</option>
+<option>Mount Allison University</option>
+<option>Queen's University</option>
+<option>Simon Fraser University</option>
+<option>St. Thomas University</option>
+<option>St. Mary's University</option>
+<option>Trent University</option>
+<option>University of Alberta</option>
+<option>University of BC</option>
+<option>University of Calgary</option>
+<option>University of Guelph</option>
+<option>Universite de Laval</option>
+<option>University of Lethbridge</option>
+<option>Universite de Montreal</option>
+<option>University of New Brunswick</option>
+<option>University of Northern BC</option>
+<option>University of Ottawa</option>
+<option>University of PEI</option>
+<option>University of Regina</option>
+<option>Universite de Sherbrooke</option>
+<option>University of Saskatchewan</option>
+<option>University of Toronto</option>
+<option>University of Victoria</option>
+<option>University of Waterloo</option>
+<option>University of Western Ontario</option>
+<option>University of Windsor</option>
+<option>Wilfrid Laurier University</option>
+<option>York University</option>
+   </select>
+</td>
+ 
+</p>
+ </tr>
+ 
+ </table>
+ <input type="submit" value="submitt"/>
+</form>
+</div>
+<p>&nbsp;</p>
+
+<!-- end bg-->
+</body>
+</html>

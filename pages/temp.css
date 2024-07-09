@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bg
+{background:#FFF; 
+height:1200;
+}
+
+#bar
+{
+background:#999;
+height:30;
+}
+
+#top
+{background:#000; 
+height: 85px;
+}
+
+button
+{ 	width:120;
+	height:30;
+	}
+
+#sms
+{
+	background-color:#999999;
+	}
+#form-enjoy
+{ background-color:#999}
+
+

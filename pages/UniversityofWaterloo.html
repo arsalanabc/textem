@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<?php
+
+session_start();
+include('../php/nowsmsdlist-php.php');
+
+
+?>
+
+
+
+<title>Untitled Document</title>
+<link  rel="stylesheet" href="temp.css" />
+</head>
+
+<script>
+
+function validate(){
+var service = document.getElementsByName("things[]");
+var agree = document.getElementById("terms");
+var other = document.getElementById("other");
+var r=0;
+for($i=0;$i<service.length;$i++)
+	{
+	if(service[$i].checked) {
+		r++;				}	
+	}// end for
+	
+if(r==0 && other.value==""){
+		alert("select a service!");
+		return false;
+		}
+var agree = document.getElementById("terms");
+if(r!=0 || other.value!=""){
+if (!agree.checked){alert("please check box accepting the terms.");
+	return false;	}
+	}
+
+
+if(other.value.indexOf(' ') >= 0) 
+	{alert("no spaces in your list name."); return false;}
+
+
+}
+
+function mylist()
+{alert("asdas");}
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+
+
+<body>
+
+
+<div id="top">
+<img src="../images/Untitled logo.png" border="10" align="left">
+<img src="../images/Untitled3.png" align="right" >
+</div> <!-- end top-->
+
+<div id="bar" align="center">
+<a href="../test1.html"> <button type="submit" id="home" value="Submit" style="width:120; height:30"><strong>Home</strong></button></a>
+<a href="contact.html">
+<button type="submit" value="Submit" style="width:120; height:30"><strong>Contact</strong></button></a>
+</div><!-- end bar button -->
+<br>
+<br>
+<br>
+
+<div id="form" align="center">
+<form name="form1" method="post" action="../php/nowsmsdlist-php.php" onSubmit="return validate()" >
+<!--
+<table border="1">
+<tr>
+<td bgcolor="#FFFF00">
+<input type="checkbox" name="things[]" value="Red"> Red<br>
+<input type="checkbox" value="Blue" name="things[]"> Blue<br>
+<input type="checkbox" value="White" name="things[]"> White<br>
+<input type="checkbox" value="Yellow" name="things[]"> Yellow<br>
+<input type="checkbox" value="Black" name="things[]"> Black<br>
+<input type="checkbox" value="Green" name="things[]"> Green<br>
+<input type="checkbox" value="Orange" name="things[]"> Orange<br>
+</td>
+
+<td bgcolor="#000000">----- </td>
+<td bgcolor="#CC66FF">
+<input type="checkbox" value="Monday" name="things[]"> Monday<br>
+<input type="checkbox" value="Tuesday" name="things[]"> Tuesday<br>
+<input type="checkbox" value="Wednesday" name="things[]"> Wednesday<br>
+<input type="checkbox" value="Thrusday" name="things[]"> Thursday<br>
+<input type="checkbox" value="Friday" name="things[]"> Friday<br>
+<input type="checkbox" value="Saturday" name="things[]"> Saturday<br>
+<input type="checkbox" value="Sunday" name="things[]"> Sunday<br>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/41607_92787605456_2242_n.jpg"><br>
+<input type="checkbox" value="asdsad">
+</td>
+</tr>
+</table>
+-->
+
+<table width="auto" border="1">
+  <tr>
+    <th width="115" scope="col">Groups</th>
+      <th  width="284" scope="col">Service/clubs</th>
+  </tr>
+  <tr>
+    <td>FEDS</td> 
+    <td>&nbsp;</td>
+    
+  </tr>
+  <tr>
+    <td>AHS</td>
+     <td bgcolor="#804FD0">&nbsp;</td>
+    </tr>
+  <tr>
+    <td>ARTS</td>
+     <td bgcolor="#FF6600">
+     <input type="checkbox" name="things[]" value="AFSA"> AFSA<br>
+     </td>   
+  </tr>
+  <tr>
+    <td>ENGINEERING</td>
+     <td bgcolor="#000000">&nbsp;</td>   
+  </tr>
+  <tr>
+    <td>ENVIRONMENT</td>
+     <td bgcolor="#339900">&nbsp;</td>   
+  </tr>
+   <tr>
+    <td>MATH</td>
+        <td bgcolor="#FF66FF">
+        <input type="checkbox" name="things[]" value="ActSci Club"> ActSci Club<br>
+        <input type="checkbox" value="Bioinformatics Club" name="things[]"> Bioinformatics Club<br>
+        <input type="checkbox" value="Computational Math Club" name="things[]"> Computational Math Club<br>
+        <input type="checkbox" value="Computer Science Club" name="things[]"> Computer Science Club<br>
+        <input type="checkbox" value="Math/Business Double Degree Club" name="things[]"> Math/Business Double Degree Club<br>
+        <input type="checkbox" value="UWFARMSA" name="things[]"> UWFARMSA<br>
+        <input type="checkbox" value=" STAT Club" name="things[]"> STAT Club<br>
+        <input type="checkbox" value="TSA" name="things[]"> TSA<br>
+        </td>
+
+  </tr>
+   <tr>
+    <td>SCIENCE</td>
+     <td bgcolor="#0033FF">&nbsp;</td>   
+  </tr>
+  
+   <tr>
+     <td>MY LIST</td> 
+     <td bgcolor="#99FF66">
+    <textarea name="things[]" id="other" cols="35" rows="1"></textarea>
+     </br>
+      <p onClick="mylist()"> what is <em><u>My List</u>?</em></p></td>
+     </tr>
+</table>
+
+
+
+<p>
+  <input type="hidden" name="what_do" value="add_to_dlist"/>
+
+ <input type="checkbox" value="terms" id="terms"> I accept the <a href="terms.html" target="_blank" >terms and conditions</a>. <br>
+  <input type="submit"  value="submit" name="submit"/>
+</p>
+</form>
+
+
+
+ 
+</body>
+</html>
+

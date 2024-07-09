@@ -1,0 +1,93 @@
+<html>
+<head><title>Schedule</title>
+
+<script type="text/javascript">
+    function validate(){
+	var name =document.getElementById("name");
+	var msg=document.getElementById("text");
+	var phone=document.getElementById("phone");
+	
+	var reg = new RegExp('[0-9]', 'i');
+	
+	//var service=document.getElementsByName("things[]");
+	
+//	alert(service.length);
+	
+if(name.value==""){alert("Please Enter Name!");return false;}
+if(phone.value.length !=10){alert("Please Enter A Valid Phone Number!");return false;}
+if(!msg.value){alert("please enter a message"); return false;}
+
+						}// end validate
+						
+						
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</head>
+
+<body bgcolor="#0000FF">
+
+
+
+
+<div align="center" id="top-bar" style="background:#999;height:350;">
+
+<div style="background:#FF0;height:20;">
+<h4 align="center"> For family use only. Only Canadian Numbers.</h4></br></br>
+</div>
+
+<form name="myform" method="post" action="d:/www/textem/php/nowsmsdlist-php.php"  
+onSubmit="return validate()"> 
+<table border="0" >
+<tr>
+<td>
+Name:
+</td>
+<td>
+ <input type="int" id="name" name="name" size="59"> </br>
+</td>
+</tr>
+
+<tr>
+<td>
+Phone(cell):
+</td>
+<td>
+<select/>
+<option value="1234567890"/>User 1
+<option value="1234567890"/>User 2
+<option value="1234567890"/>User 3
+<option value="1234567890"/>User 4(no number)
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+Message:
+</td>
+
+<td>   
+<textarea wrap id="text" name="text" rows=5 cols=76></textarea>
+</td>
+</tr>
+
+<tr>
+<input type="hidden"  name="what_do" value="SMS_to_dlist"/>
+
+<td>
+</td>
+<td>
+<input type=submit name="submit" value="SUBMIT">
+</td>
+</tr>
+</table>
+
+</form>
+</br>
+
+
+</body>
+</html>

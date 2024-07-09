@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link  rel="stylesheet" href="temp.css" />
+
+<?php 
+session_start();
+
+?>
+
+<script>
+function validate(){
+var user = document.getElementById("name");
+var password = document.getElementById("password");
+var school = document.getElementById("school");
+
+if(user.value==""){alert("invalid user name"); return false;}
+if(password.value==""){alert("please enter the password!"); return false;}
+if(school.value==""){alert("please select the school"); return false;}
+
+}
+</script>
+</head>
+
+<body>
+<div id="bg">
+
+<div id="top">
+<img src="../images/Untitled logo.png" border="10" align="left">
+<img src="../images/Untitled3.png" align="right" >
+</div> <!-- end top-->
+
+<div id="bar" align="center">
+<a href="../test1.html"> <button type="submit" id="home" value="Submit" style="width:120; height:30"><strong>Home</strong></button></a>
+<a href="contact.html">
+<button type="submit" value="Submit" style="width:120; height:30"><strong>Contact</strong></button></a>
+</div><!-- end bar button -->
+<br>
+<br>
+<br>
+
+</div>
+
+<p>&nbsp;</p>
+<div id="form" align="center" >
+
+<table  width="900" border="5">
+
+<tr>
+<td valign="top" width="450" bgcolor="#FFFFFF">
+  <p>I am a school club/service representative and I want to <strong> SEND A NOTIFICATION</strong>  to members.</p>
+  
+ <p> <a href="use.html"><img src="http://www.sportsinfo101.com/wp-content/uploads/2010/01/special_event_sign.gif" width="250" height="250"></img>
+</p>
+
+<td valign="top" bgcolor="#FFFFFF"><p>I am a school club/service representative and I want to <strong> SIGN UP FOR TeXTeM</strong>.</p>
+  <p> <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDRzYVZEVkZfdnYwanNpVHp2UXg2Wnc6MQ">
+  <img src="http://www.dormroommovers.com/images/Sign-up_off.png" width="250" height="250"></img></p>
+</td>
+</tr>
+
+<tr>
+  <td valign="top" width="450" bgcolor="#FFFFFF"><p>I am a student and  and I want to <strong> SEND A NOTIFICATION</strong><strong> </strong> to my <strong> friends</strong> .</p>
+    <p>(you can create a friend-list for your friends (up to 5) i.e. hiphopteam, intramural-team, studygroup_math135,  etc.)</p>
+<p>&nbsp;</p>
+<p><a href="send-student-list.html">
+<img src="../images/friendlist.png" width="421" height="250" /></p>
+  <td valign="top" bgcolor="#FFFFFF"><p>I am a student and would like to<strong> SHARE AN EVENT </strong>with other students. </p>
+    <p>(If you happen to be on the campus where something interesting  is taking place,  now you can  share it with everyone. Simply use this site or send the message to TeXTeM with the description of events) </p>
+    <p>i.e. free-food there is free food in Dc for the library day!<a href="share-an-event.html"><img src="http://www.lifedesignbooks.com.au/files/1TVXS1UA42/Online_sharing_image.jpg" width="250" height="250" /></a></p></td>
+</tr>
+
+</table>
+
+
+
+<!-- end bg-->
+</body>
+</html>

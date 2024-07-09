@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled Document</title>
+<link  rel="stylesheet" href="../pages/temp.css" />
+</head>
+
+<?php
+
+session_start();
+include('../php/nowsmsdlist-php.php');
+
+?>
+
+
+<script>
+
+function validate(){
+	var phone=document.getElementById("phone");
+	var school=document.getElementById("school");
+	//var service=document.getElementsByName("things[]");
+	
+//	alert(service.length);
+	
+if(phone.value.length !=10 ){alert("invalid Phone Number!");return false;}
+if(school.value=="" ){alert("Select your school!"); return false;}
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+
+
+<body>
+<div id="bg">
+
+<div id="top">
+<img src="../images/Untitled logo.png" border="10" align="left">
+<img src="../images/Untitled3.png" align="right" >
+</div> <!-- end top-->
+
+<div id="bar" align="center">
+<a href="../test1.html"> <button type="submit" id="home" value="Submit" style="width:120; height:30"><strong>Home</strong></button></a>
+<button type="submit" value="Submit" style="width:120; height:30"><strong>Contact</strong></button>
+</div>
+<h3>
+  <!-- end bar button -->
+  </h3>
+<h3>Delete me from the TeXTeM distribution lists.
+      </h3><div id="form-enjoy" align="center">
+        <form name="form1" method="post" action="../php/nowsmsdlist-php.php" onSubmit="return validate()" >
+<table border="0">
+ <tr>
+  <p>
+  <td> <label for="phone">Phone number </label></td>
+    <td>:</td>
+    <td><input type="text" name="phone" id="phone" /></td>
+  </p>
+ </tr>
+ 
+ <tr>
+ <p>
+ <td><label>School </label></td>
+   <td><label>:</label></td>
+ <td>
+   <select name="school" size="1" id="school" style="width:auto">
+   <option> </option>
+<option>Carleton University</option>
+<option>Concordia University</option>
+<option>Dalhousie University</option>
+<option>Memorial University</option>
+<option>McGill University</option>
+<option>McMaster University</option>
+<option>Mount Allison University</option>
+<option>Queen's University</option>
+<option>Simon Fraser University</option>
+<option>St. Thomas University</option>
+<option>St. Mary's University</option>
+<option>Trent University</option>
+<option>University of Alberta</option>
+<option>University of BC</option>
+<option>University of Calgary</option>
+<option>University of Guelph</option>
+<option>Universite de Laval</option>
+<option>University of Lethbridge</option>
+<option>Universite de Montreal</option>
+<option>University of New Brunswick</option>
+<option>University of Northern BC</option>
+<option>University of Ottawa</option>
+<option>University of PEI</option>
+<option>University of Regina</option>
+<option>Universite de Sherbrooke</option>
+<option>University of Saskatchewan</option>
+<option>University of Toronto</option>
+<option>University of Victoria</option>
+<option>University of Waterloo</option>
+<option>University of Western Ontario</option>
+<option>University of Windsor</option>
+<option>Wilfrid Laurier University</option>
+<option>York University</option>
+</select></td>
+ </p>
+<input type="hidden" name="what_do" value="show_dlist"/>
+ </tr>
+ </table>
+ <input type="submit" value="submitt" />
+</form>
+  
+</div>
+
+<p>Please feel free to <a href="mailto: support@email.com">email</a> if your have any concerns or if you are currently experiencing techincal difficulties.</p>
+
+<!--
+<script>
+  $("select").change(function () {
+          var str;
+		  var uwaterloo= "<input type='checkbox' name=\"things[]\" value=\"a\"> a<br><input type=\"checkbox\" name=\"things[]\" value=\"b\"> b<br><input type=\"checkbox\" name=\"things[]\" value=\"c\"> c<br><input type=\"checkbox\" name=\"things[]\" value=\"d\"> d<br>";
+		  
+		  var uwindsor= "<input type=\"checkbox\" name=\"things[]\" value=\"1\"> 1<br><input type=\"checkbox\" name=\"things[]\" value=\"2\"> 2<br><input type=\"checkbox\" name=\"things[]\" value=\"3\"> 3<br><input type=\"checkbox\" name=\"things[]\" value=\"4\"> 4<br>";
+		  
+		$("select option:selected").each(function () {
+					  
+			  if($(this).text()=="University of Waterloo"){str=uwaterloo;}
+			  else if ( $(this).text()=="University of Windsor"){str=uwindsor;}
+			  
+			});
+			  
+          $("#s-t").html(str);
+        })
+        .change();
+        </script>
+-->
+
+</div><!-- end bg-->
+
+
+ 
+</body>
+</html>

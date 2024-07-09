@@ -1,0 +1,89 @@
+<html>
+<head><title>Schedule</title>
+
+<script type="text/javascript">
+    function validate(){
+	var name =document.getElementById("name");
+	var msg=document.getElementById("text");
+	var phone=document.getElementById("phone");
+	
+	var reg = new RegExp('[0-9]', 'i');
+	
+	//var service=document.getElementsByName("things[]");
+	
+//	alert(service.length);
+	
+if(name.value==""){alert("Please Enter Name!");return false;}
+if(phone.value.length !=10){alert("Please Enter A Valid Phone Number!");return false;}
+if(!msg.value){alert("please enter a message"); return false;}
+
+						}// end validate
+						
+						
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</head>
+
+<body bgcolor="#0000FF">
+
+
+
+
+<div align="center" id="top-bar" style="background:#999;height:350;">
+
+<div style="background:#FF0;height:20;">
+<h4 align="center"> You can send me a SMS if you need to set up an interview urgent.</h4></br></br>
+</div>
+
+<form name="myform" method="post" action="d:/www/textem/php/nowsmsdlist-php.php"  
+onSubmit="return validate()"> 
+<table border="0" >
+<tr>
+<td>
+Name:
+</td>
+<td>
+ <input type="int" id="name" name="name" size="59"> </br>
+</td>
+</tr>
+
+<tr>
+<td>
+Phone(cell):
+</td>
+<td>
+ <input type="tel" id="phone" name="phone" size="59"> </br>
+</td>
+</tr>
+
+<tr>
+<td>
+Message:
+</td>
+
+<td>   
+<textarea wrap id="text" name="text" rows=5 cols=76></textarea>
+</td>
+</tr>
+
+<tr>
+<input type="hidden"  name="what_do" value="SMS_to_dlist"/>
+
+<td>
+</td>
+<td>
+<input type=submit name="submit" value="SUBMIT">
+</td>
+</tr>
+</table>
+
+</form>
+</br>
+<iframe src="https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=auvbj1j3djt14o0ms4knves5mc%40group.calendar.google.com&amp;color=%23060D5E&amp;ctz=America%2FToronto" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+</body>
+</html>

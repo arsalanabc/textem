@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<link  rel="stylesheet" href="temp.css" />
+
+<?php 
+session_start();
+
+?>
+
+<script>
+function validate(){
+var user = document.getElementById("name");
+var password = document.getElementById("password");
+var school = document.getElementById("school");
+
+if(user.value==""){alert("invalid user name"); return false;}
+if(password.value==""){alert("please enter the password!"); return false;}
+if(school.value==""){alert("please select the school"); return false;}
+
+}
+</script>
+</head>
+
+<body>
+<div id="bg">
+
+<div id="top">
+<img src="../images/Untitled logo.png" border="10" align="left">
+<img src="../images/Untitled3.png" align="right" >
+</div> <!-- end top-->
+
+<div id="bar" align="center">
+<a href="../test1.html"> <button type="submit" id="home" value="Submit" style="width:120; height:30"><strong>Home</strong></button></a>
+<a href="contact.html">
+<button type="submit" value="Submit" style="width:120; height:30"><strong>Contact</strong></button></a>
+</div><!-- end bar button -->
+<br>
+<br>
+<br>
+
+</div>
+
+<p>&nbsp;</p>
+<div id="form" >
+
+<table width="auto" border="1">
+<tr>
+<td>
+I am a school club/ service representative and I want to <strong> send a notifications</strong>  to members. 
+<td><a href="use.html"><input type="Button" value=GO></a> </td>
+</td>
+</tr>
+
+<tr>
+<td>
+I am a school club/ service representative and I want to <strong> sign up for TeXTeM </strong>. 
+<td><a href="use.html"><input type="Button" value=GO></a></td>
+</td>
+</tr>
+
+<tr>
+<td>
+I am a student and I would like to <strong> create a notification list </strong> for my friends for school use only.
+<td><a href="use.html"><input type="Button" value=GO></a></td>
+</td>
+</tr>
+
+<tr>
+<td>
+I am a student and  and I want to <strong> send a notifications </strong> to members.
+<td><a href="use.html"><input type="Button" value=GO></a></td>
+</td>
+</tr>
+</table>
+
+</div>
+<p>&nbsp;</p>
+
+<!-- end bg-->
+</body>
+</html>
